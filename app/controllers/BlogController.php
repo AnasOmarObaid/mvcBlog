@@ -11,6 +11,12 @@ class BlogController extends controller
     public function index()
     {
 
-        Helper::dd("Blog for user");
+       //TODO
     } //-- end index
+
+
+    public function show(){
+
+        return $this->view('blog.show');
+    }//-- end show
 }//-- end of class UserController

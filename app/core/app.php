@@ -33,7 +33,7 @@ class App
                 $urls = array_values($urls);
             }
             // formate controller
-            $this->controller = !empty($urls[0]) ? ucfirst($urls[0]) . "Controller" : "HomeController";
+            $this->controller = !empty($urls[0]) ? ucfirst($urls[0]) . "Controller" : "WelcomeController";
 
             // formate method
             $this->method = empty($urls[1]) ? "index" : $urls[1];
