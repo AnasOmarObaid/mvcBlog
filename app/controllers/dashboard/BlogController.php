@@ -11,6 +11,14 @@ class BlogController extends controller
     public function index()
     {
 
-        Helper::dd("Blog for admin");
+        return $this->view('dashboard.blog.index');
     } //-- end index
+
+
+    // create blog functionality
+    public function create()
+    {
+
+        return $this->view("dashboard.blog.create");
+    } //-- end create
 }//-- end of class UserController
