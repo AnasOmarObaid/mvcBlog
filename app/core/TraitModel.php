@@ -34,4 +34,9 @@ trait TraitModel
     {
         return Model::db()->deleteById(Self::render(), $id);
     }
+
+    static public function findColumn($column, $value)
+    {
+        return Model::db()->getByColumn(Self::render(), $column, $value);
+    }
 }// end class TraitModel

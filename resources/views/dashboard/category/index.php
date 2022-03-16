@@ -20,35 +20,34 @@ require_once(VIEWS . "dashboard/aside.php");
 
     <!-- table of Categories -->
     <div class="tile">
-        <h3 class="tile-title">Striped Table</h3>
+        <h3 class="tile-title">Categories Table</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
+                    <th>name</th>
+                    <th>created at</th>
+                    <th>updated at</th>
+                    <th>actions</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                <?php foreach ($categories as $index => $category) { ?>
+                    <tr>
+                        <td><?= $index + 1 ?></td>
+                        <td><?= $category->name ?></td>
+                        <td><?= $category->created_at ?></td>
+                        <td><?= $category->updated_at ?></td>
+                        <td>
+                            <a href="\dashboard\category\edit\<?= $category->id ?>" class="btn btn-primary">Edit</a>
+                            <form action="\dashboard\category\destroy\<?= $category->id ?>" method="post" class="d-inline-flex">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                <?php } ?>
+
             </tbody>
         </table>
     </div>

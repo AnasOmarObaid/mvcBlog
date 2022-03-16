@@ -1,4 +1,8 @@
-<?php require_once(VIEWS . "dashboard/header.php");
+<?php
+
+use mvc\core\Helper;
+
+require_once(VIEWS . "dashboard/header.php");
 
 require_once(VIEWS . "dashboard/nav.php");
 
@@ -23,17 +27,19 @@ require_once(VIEWS . "dashboard/aside.php");
     <div class="tile">
         <h3 class="tile-title">Category Form</h3>
         <div class="tile-body">
-            <form>
+            <form action="\dashboard\category\store" method="POST">
                 <!-- title -->
                 <div class="form-group">
                     <label class="control-label">Name</label>
-                    <input class="form-control" name="category" type="text" placeholder="Enter Category name">
+                    <input class="form-control " name="name" type="text" placeholder="Enter Category name" value="<?= Helper::old('category') ?>">
+                    <small style="color:red"> <?= Helper::error('category')  ?> </small>
+                </div>
+                <div class="tile-footer">
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Submit</button>
                 </div>
             </form>
         </div>
-        <div class="tile-footer">
-            <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Submit</button>
-        </div>
+
     </div>
 </main>
 

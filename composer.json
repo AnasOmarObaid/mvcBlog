@@ -1,17 +1,7 @@
 {
     "name": "abhino/mvc",
-    "type": "framework",
-    "homepage": "https://github.com/AnasOmarObaid/mvc",
-    "description": "mvc to create php project",
-    "minimum-stability": "dev",
-    "authors": [
-        {
-            "name": "Anas Omar",
-            "email": "ansmr002@gmail.com",
-            "homepage": "https://github.com/AnasOmarObaid/mvc",
-            "role": "Developer"
-        }
-    ],
+
+  
     "autoload": {
         "psr-4": {
             "mvc\\": "app/"
@@ -19,15 +9,6 @@
     },
     "require": {
         "dcblogdev/pdo-wrapper": "^2.0",
-        "rakit/validation": "^1.4",
-        "php": ">=7.4",
-        "another-vendor/package": "1.*",
-        "vendor/packageb": "dev-master"
-    },
-    "repositories": [
-        {
-           "type": "vcs",
-           "url": "https://github.com/AnasOmarObaid/mvc" 
-        }
-      ]
+        "rakit/validation": "^1.4"
+    }
 }

@@ -12,7 +12,7 @@ class Helper
     static function redirect($path)
     {
 
-        header('location: http://mvc.me' . $path);
+        header('location: http://mvcblog.me/' . $path);
     } //-- end redirect function
 
     // display is-invalid class
