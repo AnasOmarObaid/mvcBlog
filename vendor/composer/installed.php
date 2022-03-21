@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => '859df8058af6634ed1d918bce76faee368eb62f3',
+        'name' => 'abhino/mvc',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'abhino/mvc' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '859df8058af6634ed1d918bce76faee368eb62f3',
+            'dev_requirement' => false,
+        ),
+        'dcblogdev/pdo-wrapper' => array(
+            'pretty_version' => 'v2.0.1',
+            'version' => '2.0.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dcblogdev/pdo-wrapper',
+            'aliases' => array(),
+            'reference' => '6c048b1838858d3d825b75f11b98d13b6cf43eee',
+            'dev_requirement' => false,
+        ),
+        'rakit/validation' => array(
+            'pretty_version' => 'v1.4.0',
+            'version' => '1.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rakit/validation',
+            'aliases' => array(),
+            'reference' => 'ff003a35cdf5030a5f2482299f4c93f344a35b29',
+            'dev_requirement' => false,
+        ),
+    ),
+);
