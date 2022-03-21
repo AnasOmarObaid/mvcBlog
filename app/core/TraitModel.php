@@ -39,4 +39,9 @@ trait TraitModel
     {
         return Model::db()->getByColumn(Self::render(), $column, $value);
     }
+
+    static public function getIgnoredId($column, $value, $id)
+    {
+        return Model::db()->getIgnoreId(Self::render(), $column, $value, $id);
+    }
 }// end class TraitModel

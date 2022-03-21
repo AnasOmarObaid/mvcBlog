@@ -125,6 +125,11 @@ class Database
     {
         return $this->run("SELECT * FROM $table WHERE $column = ?", [$value])->fetch($fetchMode);
     }
+
+    public function getIgnoreId($table, $column, $value, $id, $fetchMode = PDO::FETCH_OBJ)
+    {
+        return $this->run("SELECT * FROM $table WHERE $column = ? AND id != $id", [$value])->fetch($fetchMode);
+    }
     /**
      * Get number of records
      * 

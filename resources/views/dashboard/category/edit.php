@@ -31,8 +31,8 @@ require_once(VIEWS . "dashboard/aside.php");
                 <!-- title -->
                 <div class="form-group">
                     <label class="control-label">Name</label>
-                    <input class="form-control <?= Helper::is_invalid('name') ?>" name="name" type="text" placeholder="Enter Category name" value="<?= Helper::old('name') ?>">
-                    <small style="color:red"> <?= Helper::error('category')  ?> </small>
+                    <input class="form-control <?= Helper::is_invalid('name') ?>" name="name" type="text" placeholder="Enter Category name" value="<?= Helper::old('name', $category->name) ?>">
+                    <small style="color:red"> <?= Helper::error('name')  ?> </small>
                 </div>
                 <div class="tile-footer">
                     <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Update</button>
