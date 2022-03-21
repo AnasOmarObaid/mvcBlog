@@ -56,7 +56,35 @@ class CategoryController extends controller
     // create edit function
     public function edit($id)
     {
-
-        Helper::dd($id);
+        $category =  Category::find($id);
+        return $category ? $this->view('dashboard.category.edit', ['category' => $category]) : Helper::redirect('\category');
     } //-- end edit function
+
+// update method
+public function update($id)
+{
+    $category = Category::find($id);
+    $validator = new Validator;
+    $validation = $validator->make($this->request(), [
+        'name' => 'required',
+        
+    ]);
+    $validation->validate();
+
+    // check error
+    if ($validation->fails()) {
+        return $this->view('dashboard.category.edit', ['category' => $category, 'errors' => $validation->errors()->firstOfAll()]);
+    }
+
+    Category::updated($validation->validData, $id);
+    //Session::flash('Update blog successfully');
+    Helper::redirect('\dashboard\category\edit\\' . $id);
+} //-- end update
+
+
+    public function destroy($id){
+        Category::destroy($id);
+        Helper::redirect('\dashboard\category\\');
+    }
+
 }//-- end of class UserController

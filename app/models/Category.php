@@ -2,9 +2,9 @@
 
 namespace mvc\models;
 
-use mvc\core\Model;
+use mvc\core\model;
 
-class Category extends Model
+class Category extends model
 {
     /**
      * THE DEFAULT TABLE OF THIS MODEL IS Categorys

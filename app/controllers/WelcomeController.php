@@ -2,9 +2,9 @@
 
 namespace mvc\controllers;
 
-use mvc\core\Controller;
+use mvc\core\controller;
 
-class WelcomeController extends Controller
+class WelcomeController extends controller
 {
 
     public function index()

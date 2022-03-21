@@ -82,5 +82,6 @@ return array(
     'mvc\\core\\Session' => $baseDir . '/app/core/Session.php',
     'mvc\\core\\TraitModel' => $baseDir . '/app/core/TraitModel.php',
     'mvc\\core\\controller' => $baseDir . '/app/core/controller.php',
+    'mvc\\models\\Category' => $baseDir . '/app/models/Category.php',
     'mvc\\models\\User' => $baseDir . '/app/models/User.php',
 );

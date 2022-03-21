@@ -113,6 +113,7 @@ class ComposerStaticInit79c6ffa321d1e6d6b814a302c3abd3a1
         'mvc\\core\\Session' => __DIR__ . '/../..' . '/app/core/Session.php',
         'mvc\\core\\TraitModel' => __DIR__ . '/../..' . '/app/core/TraitModel.php',
         'mvc\\core\\controller' => __DIR__ . '/../..' . '/app/core/controller.php',
+        'mvc\\models\\Category' => __DIR__ . '/../..' . '/app/models/Category.php',
         'mvc\\models\\User' => __DIR__ . '/../..' . '/app/models/User.php',
     );
 

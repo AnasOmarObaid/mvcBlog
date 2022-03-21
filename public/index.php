@@ -1,6 +1,6 @@
 <?php
-
-use mvc\core\App;
+ 
+ use mvc\core\app;
 
 define("DS", DIRECTORY_SEPARATOR);
 

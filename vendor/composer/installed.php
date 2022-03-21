@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '859df8058af6634ed1d918bce76faee368eb62f3',
+        'reference' => '1958e9520b63c03a3b99ef4b5f3f174cee2264d9',
         'name' => 'abhino/mvc',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '859df8058af6634ed1d918bce76faee368eb62f3',
+            'reference' => '1958e9520b63c03a3b99ef4b5f3f174cee2264d9',
             'dev_requirement' => false,
         ),
         'dcblogdev/pdo-wrapper' => array(
