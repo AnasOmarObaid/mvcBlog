@@ -32,10 +32,10 @@ class Helper
 
 
     // display old input
-    static public function old($input)
+    static public function old($input, $value = null)
     {
 
-        return isset($_POST[$input]) && !empty($_POST[$input]) ? $_POST[$input] : '';
+        return isset($_POST[$input]) && !empty($_POST[$input]) ? $_POST[$input] : $value;
     } //-- end display old input
 
 

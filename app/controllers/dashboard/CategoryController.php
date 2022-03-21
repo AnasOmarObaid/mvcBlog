@@ -57,32 +57,42 @@ class CategoryController extends controller
     public function edit($id)
     {
         $category =  Category::find($id);
+<<<<<<< HEAD
         return $category ? $this->view('dashboard.category.edit', ['category' => $category]) : Helper::redirect('\category');
+=======
+        return $category ? $this->view('dashboard.category.edit', ['category' => $category]) : Helper::redirect('\dashboard\category');
+>>>>>>> ce750c36db2245f5ccf5e25bc8fd1a5beb23c0be
     } //-- end edit function
 
-// update method
-public function update($id)
-{
-    $category = Category::find($id);
-    $validator = new Validator;
-    $validation = $validator->make($this->request(), [
-        'name' => 'required',
-        
-    ]);
-    $validation->validate();
+    // update method
+    public function update($id)
+    {
+        $category = Category::find($id);
+        $validator = new Validator;
+        $validation = $validator->make($this->request(), [
+            'name' => 'required|min:3',
 
-    // check error
-    if ($validation->fails()) {
-        return $this->view('dashboard.category.edit', ['category' => $category, 'errors' => $validation->errors()->firstOfAll()]);
-    }
+        ]);
+        $validation->validate();
 
-    Category::updated($validation->validData, $id);
-    //Session::flash('Update blog successfully');
-    Helper::redirect('\dashboard\category\edit\\' . $id);
-} //-- end update
+        $cat = Category::getIgnoredId('name', $this->request('name'), $id);
+        if ($cat)
+            ErrorBag::add('name', '', 'this category is already exists');
 
 
-    public function destroy($id){
+        // check error
+        if ($validation->fails()) {
+            return $this->view('dashboard.category.edit', ['category' => $category, 'errors' => $validation->errors()->firstOfAll()]);
+        }
+
+        Category::updated($this->request(), $id);
+        //Session::flash('Update blog successfully');
+        Helper::redirect('\dashboard\category\edit\\' . $id);
+    } //-- end update
+
+
+    public function destroy($id)
+    {
         Category::destroy($id);
         Helper::redirect('\dashboard\category\\');
     }
